@@ -1,0 +1,34 @@
+Source: inih
+Priority: extra
+Maintainer: Russ Kubik <russkubik@gmail.com>
+Build-Depends: debhelper (>= 7.0.0), cmake
+Standards-Version: 3.9.3
+Section: libs
+
+Package: libinic0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: C library for INI config parsing
+ Simple C INI parsing library
+
+Package: libinic-dev
+Section: libdevel
+Architecture: any
+Depends: libinic0 (= ${binary:Version}), ${misc:Depends}
+Description: C library for INI config parsing (devel)
+ Simple C INI parsing library
+
+Package: libinicpp0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: C++ library for INI config parsing
+ Simple C++ INI parsing library
+
+Package: libinicpp-dev
+Section: libdevel
+Architecture: any
+Depends: libinicpp0 (= ${binary:Version}), ${misc:Depends}
+Description: C++ library for INI config parsing (devel)
+ Simple C++ INI parsing library
