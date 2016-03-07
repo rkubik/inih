@@ -27,6 +27,16 @@ public:
     int ParseError(void) const;
 
     /**
+     * If value exists in a given section.
+     *
+     * @param section INI section
+     * @param name INI label within section
+     *
+     * @return true if value exists in given section
+     */
+    bool Has(const std::string &section, const std::string &name);
+
+    /**
      * Get value from INI file.
      *
      * @param section INI section

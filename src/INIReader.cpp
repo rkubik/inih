@@ -27,6 +27,13 @@ int INIReader::ParseError() const
     return m_error;
 }
 
+bool INIReader::Has(const string &section, const string &name)
+{
+    const string key = MakeKey(section, name);
+
+    return m_values.count(key) > 0;
+}
+
 template int    INIReader::Get <int>    (const string &section, const string &name, const int    &default_value);
 template float  INIReader::Get <float>  (const string &section, const string &name, const float  &default_value);
 template double INIReader::Get <double> (const string &section, const string &name, const double &default_value);
